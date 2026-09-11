@@ -64,3 +64,19 @@
 - None
 
 ---
+
+## WEEK 5
+**Today's Work:**
+- Completed Week 5 practice problems in Java.
+- Implemented Access Rule Engine and Patient Record.
+- Implemented Cross-Package Inheritance Reach.
+- Implemented Patient Vitals Encapsulation Guard.
+- Implemented Patient Profile using JavaBean conventions and constructor chaining.
+
+**Next Session Plan:**
+- Continue with the next set of practice problems.
+
+**Issues Faced:**
+- None
+
+---
