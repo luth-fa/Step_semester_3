@@ -1,6 +1,6 @@
 # Step_semester_3
 
-
+##WEEK 1
 
 **Today's Work:**
 - Completed Week 1 practice problems in Java.
@@ -32,3 +32,20 @@
 
 **Issues Faced:**
 - No major issues.
+
+##WEEK 3 PRACTISE
+**Today's Work:**
+- Completed Week 3 practice problems in Java.
+- Implemented SRM Student Attendance & Eligibility.
+- Implemented Fee Account inheritance and installment payment.
+- Implemented Hostel Room object references and null safety.
+- Implemented Instance/Static Boundary.
+- Implemented Hostel Management Capstone integrating inheritance, object references, static members, and null safety.
+
+**Next Session Plan:**
+- Continue with the next set of practice problems.
+
+**Issues Faced:**
+- None
+
+---
