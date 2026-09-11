@@ -1,7 +1,5 @@
 # Step_semester_3
-
-##WEEK 1
-
+## Week 1
 **Today's Work:**
 - Completed Week 1 practice problems in Java.
 - Implemented Rock-Paper-Scissors.
@@ -33,7 +31,7 @@
 **Issues Faced:**
 - No major issues.
 
-##WEEK 3 PRACTISE
+## WEEK 3
 **Today's Work:**
 - Completed Week 3 practice problems in Java.
 - Implemented SRM Student Attendance & Eligibility.
@@ -41,6 +39,23 @@
 - Implemented Hostel Room object references and null safety.
 - Implemented Instance/Static Boundary.
 - Implemented Hostel Management Capstone integrating inheritance, object references, static members, and null safety.
+
+**Next Session Plan:**
+- Continue with the next set of practice problems.
+
+**Issues Faced:**
+- None
+
+---
+
+## WEEK 4
+**Today's Work:**
+- Completed Week 4 practice problems in Java.
+- Implemented Bus Ticket Booking Validator.
+- Implemented Remainder-Fair FareSplitter.
+- Implemented Bus Route Ranking Engine.
+- Implemented Tiered Boarding Penalty Calculator.
+- Implemented Nightly Fleet Reconciliation Engine.
 
 **Next Session Plan:**
 - Continue with the next set of practice problems.
