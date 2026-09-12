@@ -9,6 +9,10 @@ public class EventTicket {
     private double[] lateFeeHistory;
     private int lateFeeCount;
 
+    private static int ticketsIssued = 0;
+
+    final String ticketId;
+
     public EventTicket(String attendeeId, double basePrice) {
 
         if (attendeeId == null || attendeeId.trim().length() < 4) {
@@ -25,6 +29,9 @@ public class EventTicket {
 
         lateFeeHistory = new double[10];
         lateFeeCount = 0;
+
+        ticketsIssued++;
+        ticketId = "TCK-" + (1000 + ticketsIssued);
     }
 
     public EventTicket(double basePrice) {
@@ -38,6 +45,9 @@ public class EventTicket {
 
         lateFeeHistory = new double[10];
         lateFeeCount = 0;
+
+        ticketsIssued++;
+        ticketId = "TCK-" + (1000 + ticketsIssued);
     }
 
     public void pay(double amount) {
@@ -47,7 +57,15 @@ public class EventTicket {
         }
     }
 
+    public void pay(double amount, String mode) {
+
+        System.out.println("Payment Mode: " + mode);
+
+        pay(amount);
+    }
+
     public double getBalanceDue() {
+
         return balanceDue;
     }
 
@@ -79,4 +97,37 @@ public class EventTicket {
         return "Standard Event Ticket | Balance Due: "
                 + getBalanceDue();
     }
+
+    public static int getTicketsIssued() {
+
+        return ticketsIssued;
+    }
+    public static boolean isValidPromoCode(String code) {
+
+    if (code == null || code.length() != 5) {
+        return false;
+    }
+
+    if (code.charAt(0) != 'F') {
+        return false;
+    }
+
+    if (!Character.isDigit(code.charAt(1))) {
+        return false;
+    }
+
+    if (!Character.isDigit(code.charAt(2))) {
+        return false;
+    }
+
+    if (!Character.isDigit(code.charAt(3))) {
+        return false;
+    }
+
+    if (!Character.isUpperCase(code.charAt(4))) {
+        return false;
+    }
+
+    return true;
+}
 }
