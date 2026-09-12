@@ -81,3 +81,19 @@
 
 ---
 
+## WEEK 6
+**Today's Work:**
+- Completed Week 6 practice problems in Java.
+- Implemented Ticket Hierarchy Foundation and Batch Registration Validator.
+- Implemented Multilevel and Hierarchical Ticket Inheritance.
+- Implemented Late-Registration Penalty Override and Audit Trail.
+- Implemented Nightly Ticket Announcer using polymorphism.
+- Implemented Fest-Wide Ticket Issuance, Promo Codes, and Nightly Settlement.
+
+**Next Session Plan:**
+- Continue with the next set of practice problems.
+
+**Issues Faced:**
+- None
+
+---
