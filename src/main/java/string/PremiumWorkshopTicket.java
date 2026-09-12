@@ -5,7 +5,7 @@ public class PremiumWorkshopTicket extends WorkshopTicket {
     private double kitFee;
 
     public PremiumWorkshopTicket(String attendeeId, double basePrice,
-                                  String track, double kitFee) {
+                                 String track, double kitFee) {
 
         super(attendeeId, basePrice, track);
 
