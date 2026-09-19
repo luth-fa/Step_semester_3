@@ -97,3 +97,29 @@
 - None
 
 ---
+
+## Week 7 – Practice
+
+### Problem 1: Checkout Payment Handler
+- Abstract `PaymentMethod` class
+- Abstract method and method overloading
+- `final` transaction ID with static counter
+- Credit card and cash payment subclasses
+- Upcasting and runtime polymorphism
+
+### Problem 2: Home Safety Alert Network
+- `Alertable` interface
+- Multilevel inheritance
+- Interface implementation
+- `super` method reuse
+- `instanceof` and safe downcasting
+- Polymorphic interface array
+
+### Problem 3: Quarterly Bonus Calculator
+- Abstract `StaffMember` class
+- Constructor chaining using `this`
+- Constructor inheritance using `super`
+- JavaBean encapsulation
+- `Auditable` interface
+- `instanceof` and interface downcasting
+- Method overriding
