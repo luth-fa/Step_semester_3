@@ -2,7 +2,7 @@ package string;
 
 public class RunnerEntry extends RaceEntry {
 
-    public String category;
+    protected String category;
 
     public RunnerEntry(String bibNumber, double entryFee, String category) {
 
@@ -11,6 +11,13 @@ public class RunnerEntry extends RaceEntry {
         this.category = category;
     }
 
+    @Override
+    protected void applyLateFee(double amount) {
+
+        super.applyLateFee(amount * 2);
+    }
+
+    @Override
     public String announce() {
 
         return "Runner Entry | Bib: " + bibNumber

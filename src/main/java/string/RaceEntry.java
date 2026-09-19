@@ -6,6 +6,9 @@ public class RaceEntry {
     protected double entryFee;
     protected double balanceDue;
 
+    private double[] lateFeeHistory;
+    private int lateFeeCount;
+
     public RaceEntry(String bibNumber, double entryFee) {
 
         if (bibNumber == null || bibNumber.trim().length() < 4) {
@@ -19,6 +22,9 @@ public class RaceEntry {
         this.bibNumber = bibNumber;
         this.entryFee = entryFee;
         this.balanceDue = entryFee;
+
+        lateFeeHistory = new double[10];
+        lateFeeCount = 0;
     }
 
     public void pay(double amount) {
@@ -28,8 +34,31 @@ public class RaceEntry {
         }
     }
 
+    protected void applyLateFee(double amount) {
+
+        if (amount > 0 && lateFeeCount < 10) {
+
+            balanceDue += amount;
+
+            lateFeeHistory[lateFeeCount] = amount;
+
+            lateFeeCount++;
+        }
+    }
+
     public double getBalanceDue() {
         return balanceDue;
+    }
+
+    public double[] getLateFeeHistory() {
+
+        double[] history = new double[lateFeeCount];
+
+        for (int i = 0; i < lateFeeCount; i++) {
+            history[i] = lateFeeHistory[i];
+        }
+
+        return history;
     }
 
     public String announce() {

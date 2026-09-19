@@ -33,41 +33,17 @@ public class RaceHierarchyTest {
     public static void main(String[] args) {
 
         RunnerEntry runner =
-                new RunnerEntry("BIB2001", 80, "Open 10K");
+        new RunnerEntry("BIB2001", 80, "Open 10K");
 
-        EliteRunnerEntry elite =
-                new EliteRunnerEntry(
-                        "BIB3001",
-                        150,
-                        "Elite Full Marathon",
-                        500);
+runner.pay(30);
+runner.applyLateFee(20);
 
-        RelayTeamEntry relay =
-                new RelayTeamEntry(
-                        "BIB4001",
-                        300,
-                        4);
+System.out.println(runner.getBalanceDue());
 
-        System.out.println(runner.announce());
-        System.out.println(elite.announce());
-        System.out.println(relay.announce());
+double[] history = runner.getLateFeeHistory();
 
-        System.out.println();
+history[0] = 999;
 
-        System.out.println(
-                classifyGeneration(elite));
-
-        System.out.println(
-                classifyGeneration(relay));
-
-        RaceEntry[] entries = {
-            runner,
-            elite,
-            relay
-        };
-
-        System.out.println(
-                "Total Balance Due: "
-                + getTotalBalanceDue(entries));
+System.out.println(runner.getLateFeeHistory()[0]);
     }
 }
