@@ -9,6 +9,10 @@ public class RaceEntry {
     private double[] lateFeeHistory;
     private int lateFeeCount;
 
+    private static int bibCounter = 0;
+
+    final String entryCode;
+
     public RaceEntry(String bibNumber, double entryFee) {
 
         if (bibNumber == null || bibNumber.trim().length() < 4) {
@@ -25,6 +29,9 @@ public class RaceEntry {
 
         lateFeeHistory = new double[10];
         lateFeeCount = 0;
+
+        bibCounter++;
+        entryCode = "RACE-" + (1000 + bibCounter);
     }
 
     public void pay(double amount) {
@@ -32,6 +39,13 @@ public class RaceEntry {
         if (amount > 0) {
             balanceDue -= amount;
         }
+    }
+
+    public void pay(double amount, String mode) {
+
+        System.out.println("Paying via " + mode);
+
+        pay(amount);
     }
 
     protected void applyLateFee(double amount) {
@@ -65,5 +79,38 @@ public class RaceEntry {
 
         return "Race Entry | Bib: " + bibNumber
                 + " | Balance: " + getBalanceDue();
+    }
+
+    public static boolean isValidDiscountCode(String code) {
+
+        if (code == null || code.length() != 5) {
+            return false;
+        }
+
+        if (code.charAt(0) != 'M') {
+            return false;
+        }
+
+        if (!Character.isDigit(code.charAt(1))) {
+            return false;
+        }
+
+        if (!Character.isDigit(code.charAt(2))) {
+            return false;
+        }
+
+        if (!Character.isDigit(code.charAt(3))) {
+            return false;
+        }
+
+        if (!Character.isUpperCase(code.charAt(4))) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public static int getBibCounter() {
+        return bibCounter;
     }
 }
