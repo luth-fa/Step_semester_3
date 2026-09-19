@@ -2,7 +2,7 @@ package string;
 
 public class RunnerEntry extends RaceEntry {
 
-    private String category;
+    public String category;
 
     public RunnerEntry(String bibNumber, double entryFee, String category) {
 
